@@ -10,6 +10,7 @@ var app = builder.Build();
 /// - Middlewares
 app.UseRewriter(new RewriteOptions().AddRedirect("^$", "/todos"));
 app.Use(async (context, next) => {
+  /// - Provides great control over received requests and responses
   Console.WriteLine($"REQ - [{context.Request.Method}] - {context.Request.Path} - [{DateTime.UtcNow}] - {context.Response.StatusCode}");
   await next(context);
   Console.WriteLine($"RES - [{context.Request.Method}] - {context.Request.Path} - [{DateTime.UtcNow}] - {context.Response.StatusCode}");
@@ -34,7 +35,7 @@ app.MapPost("/todos", Results<Created<Todo>, Conflict> (Todo task) => {
     return TypedResults.Created("/todos/{id}", task);
 
 }).AddEndpointFilter(async (context, next) => {
-  
+  /// - Checks if the received info is valid
   if(context.GetArgument<Todo>(0).DueDate < DateTime.UtcNow) {
     return TypedResults.Conflict(new ErrorMessage("DueDate is invalid"));
   } else if(todos.SingleOrDefault(t => context.GetArgument<Todo>(0).Id == t.Id) != null) {
@@ -52,9 +53,9 @@ app.MapDelete("/todos/{id}", Results<NoContent, NotFound<ErrorMessage>> (int id)
 app.Run();
 
 /// - Definitions
-public record Todo(int Id, string Name, DateTime DueDate, bool IsCompleted);
+public record Todo(int Id, string Name, DateTime DueDate, bool IsCompleted); /// - DB MOCKUP
 
-public class ErrorMessage {
+public class ErrorMessage { /// - Allows returning informative error messages
   public string Message { get; } 
 
   public ErrorMessage(string message) {
