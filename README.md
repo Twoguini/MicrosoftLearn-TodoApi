@@ -38,33 +38,33 @@ Follow these steps to set up and run the project:
   - `git clone https://github.com/Twoguini/MicrosoftLearn-TodoApi.git`
 
 2. **Running API and Tests**:
-  - Windows:
-    `cd MicrosoftLearn-TodoApi`
+  - Windows:\
+    `cd MicrosoftLearn-TodoApi`\
     `.\Run.bat`
 
-  - Gnome Based Distros:
-    `cd MicrosoftLearn-TodoApi`
+  - Gnome Based Distros:\
+    `cd MicrosoftLearn-TodoApi`\
     `./Run.sh`
 
 2. **Running Separately**:
   - Windows:
     `cd MicrosoftLearn-TodoApi`
-    - Api:
-      `cd Api-Task`
+    - Api:\
+      `cd Api-Task`\
       `dotnet run`
 
-    - Tests:
-      `cd ApiTesting`
+    - Tests:\
+      `cd ApiTesting`\
       `dotnet run`
 
   - Gnome Based Distros:
     `cd MicrosoftLearn-TodoApi`
-    - Api:
-      `cd Api-Task`
+    - Api:\
+      `cd Api-Task`\
       `dotnet run`
 
-    - Tests:
-      `cd ApiTesting`
+    - Tests:\
+      `cd ApiTesting`\
       `dotnet run`
 
 These scripts will build the project and start the API. By default, the API will be accessible at http://localhost:5000.
