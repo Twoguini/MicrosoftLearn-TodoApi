@@ -9,7 +9,7 @@
 ## Enviroment
 ### Running
 
-Running the tests is simple and it is covered on [Readme.md](README.md#Running)
+Running the tests is simple and it is covered on [Readme.md](README.md#Getting-Started)
 
 ## Strategy
 
