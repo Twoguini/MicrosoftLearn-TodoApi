@@ -13,8 +13,6 @@ Access the Api documentation on [Api-Doc](Tests-Doc.md) file.
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
-  - [Running the API](###Running-API-and-Tests)
-  - [Running Tests](###Running-Separately)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [License](#license)
@@ -36,11 +34,11 @@ Access the Api documentation on [Api-Doc](Tests-Doc.md) file.
 
 Follow these steps to set up and run the project:
 
-### 1. **Clone the Repository**:
+1. **Clone the Repository**:
 
   - `git clone https://github.com/Twoguini/MicrosoftLearn-TodoApi.git`
 
-### 2. **Running API and Tests**:
+2. **Running API and Tests**:
   - Windows:\
     `cd MicrosoftLearn-TodoApi`\
     `.\Run.bat`
@@ -49,7 +47,7 @@ Follow these steps to set up and run the project:
     `cd MicrosoftLearn-TodoApi`\
     `./Run.sh`
 
-### 2. **Running Separately**:
+2. **Running Separately**:
   - Windows:
     `cd MicrosoftLearn-TodoApi`
     - Api:\
