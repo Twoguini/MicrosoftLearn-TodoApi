@@ -5,6 +5,9 @@ A simple API developed to explore and learn ASP.NET Core and C#. This project ex
 ## Api Documentation
 Access the Api documentation on [Api-Doc](Api-Doc.md) file.
 
+## Tests Documentation
+Access the Api documentation on [Api-Doc](Tests-Doc.md) file.
+
 ## Table of Contents
 
 - [Features](#features)
