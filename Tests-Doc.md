@@ -7,7 +7,9 @@
 - [Testes and Expected Responses](#Testes-and-Expected-Responses)
 
 ## Enviroment
-// running
+### Running
+
+Running the tests is simple and it is covered on [Readme.md](README.md#Running)
 
 ## Strategy
 
