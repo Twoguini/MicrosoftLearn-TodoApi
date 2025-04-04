@@ -13,8 +13,6 @@ Access the Api documentation on [Api-Doc](Tests-Doc.md) file.
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
-  - [Running the API](#running-the-api)
-  - [Running Tests](#running-tests)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [License](#license)
