@@ -16,10 +16,18 @@ As intendend by Microsoft when creating this "Step by Step" tutorial, i used thi
 
 ## Middlewares and Filters
 
-## Endpoints
-// Base URL
+- Redirect `/` to `/todos`. `/todos` is the base path this Api use.
+- Logging Middleware - Log  `Method`, `Path`, `DateTime Now` and `Status Code`. 
 
-## Req-Res Formats
+## Endpoints
+
+By default, the Api will be accessible at http://localhost:5000.
+
+  ### Get:
+  ### Post:
+  ### Delete:
+
+## Req - Res Formats
 
 ## Error Handling
 
