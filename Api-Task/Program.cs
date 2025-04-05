@@ -29,7 +29,7 @@ app.MapGet("/todos/{id}", Results<Ok<Todo>, NotFound<ErrorMessage>> (int id) => 
         : TypedResults.Ok(targetTodo);
 });
 
-app.MapPost("/todos", Results<Created<Todo>, Conflict> (Todo task) => {
+app.MapPost("/todos", Results<Created<Todo>, Conflict, BadRequest> (Todo task) => {
 
     todos.Add(task);
     return TypedResults.Created("/todos/{id}", task);
@@ -40,6 +40,8 @@ app.MapPost("/todos", Results<Created<Todo>, Conflict> (Todo task) => {
     return TypedResults.Conflict(new ErrorMessage("DueDate is invalid"));
   } else if(todos.SingleOrDefault(t => context.GetArgument<Todo>(0).Id == t.Id) != null) {
     return TypedResults.Conflict(new ErrorMessage("A Task With Same Id Has Already Been Added"));
+  } else if(context.GetArgument<Todo>(0).Name == null) {
+    return TypedResults.BadRequest(new ErrorMessage("Received Body is Wrong"));
   }
   return await next(context);
 });
@@ -53,7 +55,7 @@ app.MapDelete("/todos/{id}", Results<NoContent, NotFound<ErrorMessage>> (int id)
 app.Run();
 
 /// - Definitions
-public record Todo(int Id, string Name, DateTime DueDate, bool IsCompleted); /// - DB MOCKUP
+public record Todo(int Id, string Name, DateTime DueDate, bool IsCompleted); /// - DB MOCKUP //TODO - Create an Actual DB 
 
 public class ErrorMessage { /// - Allows returning informative error messages
   public string Message { get; } 

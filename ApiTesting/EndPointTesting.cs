@@ -102,6 +102,17 @@ try {
         errors++;
     }
 
+    /// - 10° Test - POST "/todos" (Null Name) -> Error ""
+    response = await PostingTest($"{url}todos", "{\"id\": 1, \"dueDate\": \"2027-12-31\", \"isCompleted\": false }");
+    Console.WriteLine($" --------------------- {response.StatusCode} - {response.Content}");
+    ExpectedResponses repeatedPostExpectedResponse = new(409, "{\"message\":\"A Task With Same Id Has Already Been Added\"}");
+    if(isResponseExpected(response, repeatedPostExpectedResponse)) {
+        Console.WriteLine("Teste passed - 5° Test - Post \"/todos\" (Repeated Todo) -> Error \"A Task With Same Id Has Already Been Added\"");
+    } else {
+        Console.WriteLine("Something Wen't Wrong. Check Console Above Lines for more info.");
+        errors++;
+    }
+
     /// - Api Tests - End
     Console.WriteLine($"\nTests completed with: \n{errors} Errors && {9-errors} Passed Tests");
 
