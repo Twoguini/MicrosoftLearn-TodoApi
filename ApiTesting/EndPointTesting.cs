@@ -102,24 +102,23 @@ try {
         errors++;
     }
 
-    /// - 10° Test - POST "/todos" (Null Name) -> Error ""
+    /// - 10° Test - POST "/todos" (Null Name) -> Error "Received Body is Wrong"
     response = await PostingTest($"{url}todos", "{\"id\": 1, \"dueDate\": \"2027-12-31\", \"isCompleted\": false }");
-    Console.WriteLine($" --------------------- {response.StatusCode} - {response.Content}");
-    ExpectedResponses repeatedPostExpectedResponse = new(409, "{\"message\":\"A Task With Same Id Has Already Been Added\"}");
-    if(isResponseExpected(response, repeatedPostExpectedResponse)) {
-        Console.WriteLine("Teste passed - 5° Test - Post \"/todos\" (Repeated Todo) -> Error \"A Task With Same Id Has Already Been Added\"");
+    ExpectedResponses nullPostExpectedResponse = new(400, "{\"message\":\"Received Body is Wrong\"}");
+    if(isResponseExpected(response, nullPostExpectedResponse)) {
+        Console.WriteLine("Teste passed - 10° Test - Post \"/todos\" (Null Name) -> Error \"Received Body is Wrong\"");
     } else {
         Console.WriteLine("Something Wen't Wrong. Check Console Above Lines for more info.");
         errors++;
     }
 
     /// - Api Tests - End
-    Console.WriteLine($"\nTests completed with: \n{errors} Errors && {9-errors} Passed Tests");
+    Console.WriteLine($"\nTests completed with: \n{errors} Errors && {10-errors} Passed Tests");
 
 /// - Error Handling
 } catch(Exception e) {
      Console.WriteLine($"\n{e.Message}");
-     Console.WriteLine($"\nTests completed with: \n{errors} Errors && {9-errors} Passed Tests");
+     Console.WriteLine($"\nTests completed with: \n{errors} Errors && {10-errors} Passed Tests");
      return;
 };
 

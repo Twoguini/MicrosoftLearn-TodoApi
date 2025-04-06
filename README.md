@@ -45,6 +45,7 @@ Follow these steps to set up and run the project:
 
   - Gnome Based Distros:\
     `cd MicrosoftLearn-TodoApi`\
+    `chmod +x ./Run.sh`\
     `./Run.sh`
 
 2. **Running Separately**:
