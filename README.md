@@ -6,7 +6,7 @@ A simple API developed to explore and learn ASP.NET Core and C#. This project ex
 Access the Api documentation on [Api-Doc](Api-Doc.md) file.
 
 ## Tests Documentation
-Access the Api documentation on [Api-Doc](Tests-Doc.md) file.
+Access the Api documentation on [Tests-Doc](Tests-Doc.md) file.
 
 ## Table of Contents
 
@@ -36,40 +36,58 @@ Follow these steps to set up and run the project:
 
 1. **Clone the Repository**:
 
-  - `git clone https://github.com/Twoguini/MicrosoftLearn-TodoApi.git`
+  - ```bash
+    git clone https://github.com/Twoguini/MicrosoftLearn-TodoApi.git
+    ```
 
 2. **Running API and Tests**:
-  - Windows:\
-    `cd MicrosoftLearn-TodoApi`\
-    `.\Run.bat`
+  - Windows:
+    ```bash 
+    cd MicrosoftLearn-TodoApi
+    .\Run.bat
+    ```
 
-  - Gnome Based Distros:\
-    `cd MicrosoftLearn-TodoApi`\
-    `chmod +x ./Run.sh`\
-    `./Run.sh`
+  - Gnome Based Distros:
+    ```bash
+    cd MicrosoftLearn-TodoApi
+    chmod +x ./Run.sh
+    ./Run.sh
+    ```
 
 2. **Running Separately**:
   - Windows:
-    `cd MicrosoftLearn-TodoApi`
-    - Api:\
-      `cd Api-Task`\
-      `dotnet run`
+    ```bash
+    cd MicrosoftLearn-TodoApi
+    ```
+    - Api:
+      ```bash
+      cd Api-Task
+      dotnt run
+      ```
 
-    - Tests:\
-      `cd ApiTesting`\
-      `dotnet run`
+    - Tests:
+      ```bash
+      cd ApiTesting
+      dotnet run
+      ```
 
   - Gnome Based Distros:
-    `cd MicrosoftLearn-TodoApi`
-    - Api:\
-      `cd Api-Task`\
-      `dotnet run`
+    ```bash
+    cd MicrosoftLearn-TodoApi
+    ```
+    - Api:
+      ```bash
+      cd Api-Task
+      dotnet run
+      ```
 
-    - Tests:\
-      `cd ApiTesting`\
-      `dotnet run`
+    - Tests:
+      ```bash
+      cd ApiTesting
+      dotnet run
+      ``` 
 
-These scripts will build the project and start the API. By default, the API will be accessible at http://localhost:5000.
+These scripts will build the project and start the API. By default, the API runs at: **http://localhost:5285**.
 
 ## Project Structure
 
