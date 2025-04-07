@@ -1,10 +1,10 @@
 # Api Documentation 
 
-A simple API developed to explore and learn ASP.NET Core and C#. This project extends the foundational concepts from Microsoft's learning resources by incorporating additional functionalities such as automated tests, data validations, and platform-specific scripts (Windows and Gnome-Based Linux Distros) for running the application and tests.
+A simple API developed to explore and learn ASP.NET Core and C#. This project extends the foundational concepts from Microsoft's learning resources by incorporating additional functionalities such as automated tests, data validations, and platform-specific scripts (Windows and Gnome-Based Linux Distros) for running the application and its tests.
 
-This Api Create, Read and Delete To-do Tasks and uses a `Record` as a **DB Mockup**. 
+This Api supports Creating, Reading and Deleting To-do Tasks and uses a `Record` as a **DB Mock**. 
 
-As intendend by Microsoft when creating this "Step by Step" tutorial, i used this Api to learn and develop my habilities on C# and ASP.NET. This Api isn't only a result of that tutorial, i went far and created some features by myself.
+As intendend by Microsoft when creating this "Step by Step" tutorial, this project was created as a way to practice and grow my skills in C# and ASP.NET. Beyond the tutorial, I implemented several additional features independently.
 
 ## Table of Contents
 
