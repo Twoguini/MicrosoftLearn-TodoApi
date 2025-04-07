@@ -23,13 +23,13 @@ As intendend by Microsoft when creating this "Step by Step" tutorial, i used thi
   ### Endpoint Filters
   - **Post Filter**:
     1. Validates that the due date is not in the past.\
-      -> If Invalid: Returns - `409 - DueDate is invalid`.
+      → If Invalid: Returns - `409 - DueDate is invalid`.
 
     2. If there isn't any recorded Task with the same Id.\
-      If there is, This Task is invalid - `409 - A Task With Same Id Has Already Been Added`.
+      → If there is, This Task is invalid - `409 - A Task With Same Id Has Already Been Added`.
 
     3. If the received name isn't null.\
-      If it is, This Task is invalid - `400 - Received Body is Wrong`.
+      → If it is, This Task is invalid - `400 - Received Body is Wrong`.
 
     See [Error Handling](#error-handling) for more.
 
@@ -44,7 +44,7 @@ By default, the Api runs at: **http://localhost:5285**.
   `"/todos/{id}"`:\
   ✅ **`200 - OK` - Returns the Todo with the specified ID**.\
   ❌ **`404 - Not Found` - If no Task with the given ID exists**.\
-  -> `Response: {"message": "There is no Task with id - {id}" }`
+  → `Response: {"message": "There is no Task with id - {id}" }`
 
   ### Post:
   ✅ `201 - Created` – If the task is valid and successfully created.  
